@@ -137,7 +137,7 @@ public:
         positiveTips = {
             "Keep that energy up, share your happiness with others!",
             "Celebrate your wins, no matter how small.",
-            "Use this motivation to work on a goal you've been postponing.",
+            "Use this motivation to work on a goal you’ve been postponing.",
             "Stay grateful, positivity is contagious!",
             "Keep smiling, your good energy can brighten someone's day!"
         };
@@ -156,14 +156,14 @@ public:
             "It is okay to not be okay, be gentle with yourself.",
             "Try taking a break and focusing on your breathing.",
             "Talk to someone you trust about whats on your mind.",
-            "Write down what's bothering you, releasing helps.",
+            "Write down what’s bothering you, releasing helps.",
             "Small steps count. Focus on one positive thing today."
         };
 
         // Default depressed tips
         depressedTips = {
             "You are not alone, reaching out for help is a brave step.",
-            "Please take things one day at a time, you've made it this far.",
+            "Please take things one day at a time, you’ve made it this far.",
             "Talk to a trusted friend or counselor. You matter.",
             "Rest and take care of yourself, recovery starts small.",
             "It is okay to ask for support. You deserve kindness and care."
@@ -214,10 +214,9 @@ public:
     void addUserTip(const string &mood, const string &tip) {
         string filename;
 
-        if (mood == "Happy" || mood == "Positive") filename = "positive_tips.txt";
-        else if (mood == "Neutral") filename = "neutral_tips.txt";
-        else if (mood == "Negative") filename = "negative_tips.txt";
-        else if (mood == "Depressed") filename = "depressed_tips.txt";
+        if (mood == "Happy" || mood == "happy" || mood == "Positive" || mood == "positive") filename = "positive_tips.txt";
+        else if (mood == "Negative" || mood == "negative") filename = "negative_tips.txt";
+        else if (mood == "Depressed" || mood == "depressed") filename = "depressed_tips.txt";
         else filename = "neutral_tips.txt";
 
         ofstream ofs(filename, ios::app);
@@ -231,7 +230,7 @@ public:
 };
 
 
-// reading/writing mood history
+// reading and writing mood history
 class FileManager {
 public:
     // write mood history to file
@@ -630,7 +629,7 @@ int main() {
                 }else {
                     // push to undo stack so user can restore if needed
                     undoStack.push(removed);
-                    cout << "Last entry removed (you can restore using option 9).\n";
+                    cout << "Last entry removed (you can restore using option 10).\n";
                 }
             }else if (choice == 4) {
                 // analytics
@@ -645,7 +644,7 @@ int main() {
                 cout << "Mood counts:\n";
                 for (auto &p : freq) {
                     cout << " - " << p.first << " : " << p.second << " ";
-                    for (int i = 0; i < p.second; ++i) 
+                    for (int i = 0; i < p.second; ++i)
                     cout << '\n';
                 }
             } else if (choice == 5) {
