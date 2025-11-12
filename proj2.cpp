@@ -485,17 +485,20 @@ string todayDate() {
 
 // Menu
 void showMenu() {
-    cout << "\n=== MoodMate AI+ ===\n";
-    cout << "1. Enter today's mood\n";
-    cout << "2. Show mood history\n";
-    cout << "3. Undo last entry\n";
-    cout << "4. Show analytics\n";
-    cout << "5. Export history to file\n";
-    cout << "6. Import history from file\n";
-    cout << "7. Add custom quote\n";
-    cout << "8. Predict next mood\n";
-    cout << "9. Restore last undo\n";
-    cout << "10. Exit\n";
+    cout << "╔════════════════════════════════════════════════╗\n";
+    cout << "║               MoodMate AI+ Menu                ║\n";
+    cout << "╠════════════════════════════════════════════════╣\n";
+    cout << "║ 1. Enter today's mood                          ║\n";
+    cout << "║ 2. Show mood history                           ║\n";
+    cout << "║ 3. Undo last entry                             ║\n";
+    cout << "║ 4. Show analytics                              ║\n";
+    cout << "║ 5. Export history to file                      ║\n";
+    cout << "║ 6. Import history from file                    ║\n";
+    cout << "║ 7. Add custom quote                            ║\n";
+    cout << "║ 8. Predict next mood                           ║\n";
+    cout << "║ 9. Restore last undo                           ║\n";
+    cout << "║ 10. Exit                                       ║\n";
+    cout << "╚════════════════════════════════════════════════╝\n";
     cout << "Choose option: ";
 }
 
@@ -516,9 +519,12 @@ int main() {
 
     // login and register menu
     int loginChoice;
-    cout << "\n=== ACCOUNT MENU ===\n";
-    cout << "1. Login\n";
-    cout << "2. Register\n";
+    cout << "╔══════════════════════════╗\n";
+    cout << "║        ACCOUNT MENU      ║\n";
+    cout << "╠══════════════════════════╣\n";
+    cout << "║ 1. Login                 ║\n";
+    cout << "║ 2. Register              ║\n";
+    cout << "╚══════════════════════════╝\n";
     cout << "Choose option: ";
     cin >> loginChoice;
     cin.ignore();
